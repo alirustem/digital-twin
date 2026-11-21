@@ -1,0 +1,12 @@
+# Virtual environments
+.venv
+
+# Next.js
+node_modules
+.next
+out
+
+# Secrets and private notes
+.env
+.env.*
+manifesto.md
