@@ -10,3 +10,6 @@ out
 .env
 .env.*
 manifesto.md
+
+# Local AI agent instructions
+AGENTS.md

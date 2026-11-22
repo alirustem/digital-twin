@@ -45,7 +45,7 @@ function Hero() {
   return (
     <section className="px-5 py-12 md:px-8 md:py-16">
       <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-        <div>
+        <div className="min-w-0">
           <p className="font-mono text-sm text-phosphor">
             ali@kanata-lab:~$ whoami
             <span className="cursor" />
@@ -60,9 +60,14 @@ function Hero() {
           <p className="mt-6 max-w-xl text-2xl leading-snug text-paper">
             I make packets behave, then teach software to notice when they don&apos;t.
           </p>
-          <p className="mt-4 max-w-xl text-lg text-dim">
-            {profile.headline}. Service-provider routing, the ugly troubleshooting,
-            Python automation, and applied LLMs for infrastructure.
+          <p className="mt-4 max-w-xl text-lg leading-relaxed text-dim">
+            Father first. Engineer by profession. Builder by instinct. Senior IP/MPLS
+            specialist turning years of network troubleshooting into automation and
+            applied AI. Working toward the intersection of technology, products, and
+            leadership — preferably without another unnecessary meeting.
+          </p>
+          <p className="mt-4 font-mono text-xs tracking-wide text-dim">
+            Father first. Engineer always. Curious indefinitely.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#journey" className="bg-phosphor px-4 py-2 font-mono text-sm text-chassis">
@@ -104,35 +109,72 @@ function Hero() {
 
 function About() {
   return (
-    <Section id="about" index="01  /  ABOUT" title="The engineer in the lab." aside="Yes, the mug says I love MPLS. No follow-up questions.">
-      <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr]">
-        <div className="space-y-4 text-lg leading-relaxed text-paper/95">
-          <p>
-            I am a senior IP/MPLS engineer. The day job is high-level routing
-            architecture and the troubleshooting that shows up when a service-provider
-            network is large enough to have opinions.
-          </p>
-          <p>
-            In parallel I design network automation in Python, because doing the same
-            CLI dance by hand is how outages get a head start. I am also building
-            applied LLM tools for infrastructure: troubleshooting workflows, analysis,
-            and network intelligence.
-          </p>
-          <p>
-            Engineer, problem-solver, builder. Nokia is where that craft got deep.
-            The work now is routing, automation, and AI that has to survive contact
-            with a real network.
-          </p>
+    <Section id="about" index="01  /  ABOUT" title="The human behind the terminal." aside="Yes, the mug says I love MPLS. No follow-up questions.">
+      <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr] lg:items-start">
+        <div className="min-w-0 max-w-2xl space-y-6 text-lg leading-relaxed text-paper/95">
+          <div className="space-y-4">
+            <p>
+              Father first. Engineer, problem-solver, and builder by every other
+              measure. I believe in doing difficult things well, learning relentlessly,
+              and making sure the people who matter most never have to compete with a
+              routing table for my attention. Usually.
+            </p>
+            <p>
+              Professionally, I&apos;ve spent years in the wonderfully unforgiving world
+              of service-provider networks. IP/MPLS, routing architecture, complex
+              troubleshooting, and the occasional network that has apparently decided
+              to develop a personality. I&apos;m a Senior TEC Engineer at Nokia, where
+              the problems tend to arrive after the easy answers have already been
+              exhausted.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p>
+              I also build things. Python automation, network tooling, and increasingly,
+              AI-powered systems that can analyze, troubleshoot, and make infrastructure
+              engineering a little less dependent on heroic amounts of manual effort.
+              I&apos;m not particularly interested in AI as a buzzword. I want it to do
+              actual work. Preferably without hallucinating a new BGP attribute.
+            </p>
+            <p>
+              But I don&apos;t intend to spend my entire career looking at routing tables.
+              I want to help shape the products, technologies, and decisions behind them.
+              Engineering is my foundation. AI is a force multiplier. Product thinking
+              and leadership are where I&apos;m heading.
+            </p>
+          </div>
+          <div className="space-y-4 border-l border-paper/20 pl-4">
+            <p>
+              The ambition is simple: become the kind of technical leader who understands
+              the architecture, the business, the people, and what actually happens when
+              someone types <code className="font-mono text-[0.92em] text-phosphor">commit</code>.
+            </p>
+            <p>
+              And outside all of that? I&apos;m a husband and father. That&apos;s the part
+              of my life where the stakes are highest, the SLA is non-negotiable, and the
+              smallest stakeholder somehow has the most authority.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex min-w-0 flex-col gap-4">
           <aside className="border border-paper/15 bg-panel p-5">
             <p className="font-mono text-xs text-amber">IDENTITY FILE</p>
-            <ul className="mt-4 space-y-3 font-mono text-sm text-paper">
-              <li><span className="text-dim">loc</span> &nbsp; Ottawa, Canada</li>
-              <li><span className="text-dim">org</span> &nbsp; <Out href="https://nokia.com/">Nokia</Out></li>
-              <li><span className="text-dim">base</span> &nbsp; IP/MPLS, SR, VPN, EVPN</li>
-              <li><span className="text-dim">side</span> &nbsp; Python, RAG, agents</li>
-            </ul>
+            <dl className="mt-4 grid grid-cols-[6ch_1fr] gap-x-3 gap-y-1.5 font-mono text-sm leading-snug text-paper [&_dd]:m-0 [&_dt]:m-0 [&_dt]:font-normal">
+              <dt className="text-dim">role</dt>
+              <dd className="min-w-0">Father. Engineer. Builder.</dd>
+              <dt className="text-dim">loc</dt>
+              <dd className="min-w-0">Ottawa, Canada</dd>
+              <dt className="text-dim">org</dt>
+              <dd className="min-w-0"><Out href="https://nokia.com/">Nokia</Out></dd>
+              <dt className="text-dim">core</dt>
+              <dd className="min-w-0">IP/MPLS, SR, VPN, EVPN</dd>
+              <dt className="text-dim">tools</dt>
+              <dd className="min-w-0">Python, RAG, AI agents</dd>
+              <dt className="text-dim">next</dt>
+              <dd className="min-w-0">Product & technology leadership</dd>
+              <dt className="text-dim">boss</dt>
+              <dd className="min-w-0 text-phosphor">A very opinionated toddler</dd>
+            </dl>
           </aside>
           <ul className="flex flex-wrap gap-2" aria-hidden>
             <li className="-rotate-2 border-2 border-chassis bg-paper px-2 py-1 font-mono text-xs font-bold text-chassis shadow-[3px_3px_0_#000]">
@@ -146,6 +188,15 @@ function About() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="mt-8 max-w-xl border border-paper/15 bg-black/50 p-4 font-mono text-sm leading-6">
+        <p className="text-phosphor">$ uptime</p>
+        <p className="text-paper">38 years. Multiple countries. Bedtime has a stricter SLA.</p>
+        <p>
+          <span className="text-dim">Primary process: </span>
+          <span className="text-phosphor">dad</span>
+        </p>
+        <p className="text-dim">Background processes: engineering, AI, ambition</p>
       </div>
     </Section>
   );
@@ -227,14 +278,23 @@ function Expertise() {
 function Ambition() {
   return (
     <Section id="ambition" index="04  /  AMBITION" title="Networking in. AI on top. Leadership ahead." aside="Networking got me here. AI is how the repetitive parts get automated.">
-      <p className="max-w-3xl text-xl leading-snug">
-        Networking is the foundation. AI is the force multiplier. The point is to
-        engineer with the tools, not to rent a personality from a chatbot.
-      </p>
-      <p className="mt-4 max-w-3xl text-paper/85">
-        The direction is a technical leader at the intersection of networking,
-        AI and automation, product delivery, and business judgment.
-      </p>
+      <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
+        <p className="text-xl leading-snug text-paper">
+          Networking is my foundation. AI is my force multiplier. Product thinking is the next frontier.
+        </p>
+        <p className="text-paper/85">
+          I&apos;ve spent years learning how complex networks behave, how they fail, and how to make them work again. Now I&apos;m building tools that make that knowledge scalable.
+        </p>
+        <p className="text-paper/85">
+          The longer-term goal is to move beyond solving individual problems and help shape the products, architectures, and strategies that prevent them in the first place.
+        </p>
+        <p className="border-l-2 border-phosphor py-0.5 pl-4 text-paper">
+          I&apos;m not leaving engineering behind. I&apos;m taking it with me into product and technology leadership.
+        </p>
+        <p className="text-paper/85">
+          Because someone in the room should understand both the business case and why the routing adjacency is down.
+        </p>
+      </div>
       <div className="mt-8 grid gap-4 md:grid-cols-3">
         {ambition.map((item) => (
           <article key={item.k} className="border border-paper/15 bg-panel p-5">

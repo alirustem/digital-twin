@@ -71,6 +71,9 @@ export function Footer() {
  3  istanbul
  4  ottawa     * * *
  5  still forwarding`}</pre>
+          <p className="mt-4 max-w-sm font-mono text-xs leading-relaxed text-dim">
+            Built with curiosity, caffeine, and an unreasonable attachment to MPLS.
+          </p>
         </div>
         <p className="max-w-xs font-mono text-sm text-paper">
           This page is up. Your next hop might not be.
