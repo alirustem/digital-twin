@@ -44,7 +44,7 @@ export default function HomePage() {
 function Hero() {
   return (
     <section className="px-5 py-12 md:px-8 md:py-16">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="mx-auto grid min-w-0 max-w-6xl items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="min-w-0">
           <p className="font-mono text-sm text-phosphor">
             ali@kanata-lab:~$ whoami
@@ -84,7 +84,7 @@ function Hero() {
             <p className="text-dim">0% packet loss. 100% opinions.</p>
           </div>
         </div>
-        <figure className="bezel mx-auto w-full max-w-md">
+        <figure className="bezel mx-auto w-full min-w-0 max-w-md">
           <span className="screw tl" aria-hidden />
           <span className="screw tr" aria-hidden />
           <span className="screw bl" aria-hidden />
@@ -110,9 +110,9 @@ function Hero() {
 function About() {
   return (
     <Section id="about" index="01  /  ABOUT" title="The human behind the terminal." aside="Yes, the mug says I love MPLS. No follow-up questions.">
-      <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr] lg:items-start">
-        <div className="min-w-0 max-w-2xl space-y-6 text-lg leading-relaxed text-paper/95">
-          <div className="space-y-4">
+      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,40rem)_minmax(17rem,1fr)] lg:gap-x-12">
+        <div className="min-w-0 max-w-2xl space-y-5 text-base leading-relaxed text-paper/95 md:text-lg">
+          <div className="space-y-3">
             <p>
               Father first. Engineer, problem-solver, and builder by every other
               measure. I believe in doing difficult things well, learning relentlessly,
@@ -128,7 +128,7 @@ function About() {
               exhausted.
             </p>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p>
               I also build things. Python automation, network tooling, and increasingly,
               AI-powered systems that can analyze, troubleshoot, and make infrastructure
@@ -137,24 +137,16 @@ function About() {
               actual work. Preferably without hallucinating a new BGP attribute.
             </p>
             <p>
-              But I don&apos;t intend to spend my entire career looking at routing tables.
-              I want to help shape the products, technologies, and decisions behind them.
-              Engineering is my foundation. AI is a force multiplier. Product thinking
-              and leadership are where I&apos;m heading.
+              I don&apos;t intend to spend my entire career looking at routing tables.
+              I also don&apos;t intend to forget what happens when someone types{" "}
+              <code className="font-mono text-[0.92em] text-phosphor">commit</code>.
             </p>
           </div>
-          <div className="space-y-4 border-l border-paper/20 pl-4">
-            <p>
-              The ambition is simple: become the kind of technical leader who understands
-              the architecture, the business, the people, and what actually happens when
-              someone types <code className="font-mono text-[0.92em] text-phosphor">commit</code>.
-            </p>
-            <p>
-              And outside all of that? I&apos;m a husband and father. That&apos;s the part
-              of my life where the stakes are highest, the SLA is non-negotiable, and the
-              smallest stakeholder somehow has the most authority.
-            </p>
-          </div>
+          <p className="border-l border-paper/20 pl-4">
+            I&apos;m a husband and father. That&apos;s the part of my life where the
+            stakes are highest, the SLA is non-negotiable, and the smallest stakeholder
+            somehow has the most authority.
+          </p>
         </div>
         <div className="flex min-w-0 flex-col gap-4">
           <aside className="border border-paper/15 bg-panel p-5">
@@ -277,7 +269,7 @@ function Expertise() {
 
 function Ambition() {
   return (
-    <Section id="ambition" index="04  /  AMBITION" title="Networking in. AI on top. Leadership ahead." aside="Networking got me here. AI is how the repetitive parts get automated.">
+    <Section id="ambition" index="04  /  AMBITION" title="Networking in. AI on top. Leadership ahead." aside="Same craft. A wider seat.">
       <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
         <p className="text-xl leading-snug text-paper">
           Networking is my foundation. AI is my force multiplier. Product thinking is the next frontier.

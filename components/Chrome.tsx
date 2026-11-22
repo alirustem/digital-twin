@@ -107,7 +107,7 @@ export function Section({
             {mark}
             <div>
               <p className="font-mono text-xs tracking-[0.22em] text-amber">{index}</p>
-              <h2 className="font-display text-4xl text-paper md:text-5xl">{title}</h2>
+              <h2 className="font-display text-balance text-4xl leading-[1.05] text-paper md:text-5xl">{title}</h2>
             </div>
           </div>
           <p className="max-w-sm font-mono text-sm text-dim">{aside}</p>
