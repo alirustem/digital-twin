@@ -197,77 +197,112 @@ export const profiles = [
   { label: "SMART Co.", href: "http://www.ses-jo.com/", note: "The resume link on that chapter." },
 ];
 
-export const certificates: { name: string; href: string }[] = [
+export type ExamLink = { name: string; href: string; note?: string; highlight?: boolean };
+
+export const nokiaLogo = "/nokia-logo.png";
+
+export const sra = {
+  name: "Nokia Service Routing Architect",
+  short: "SRA",
+  id: "1159",
+  validThrough: "Nov 2029",
+  line: "Nokia SRA — Nokia’s highest IP/MPLS certification, in the same league as Cisco CCIE Service Provider. Expert-level network design, architecture, and troubleshooting when reality disagrees with the design.",
+  href: "https://www.credly.com/badges/cf827f7e-3df0-4139-8e8d-d47842e04f5c/public_url",
+  labHref: "https://www.credly.com/badges/94a96c3a-9694-4f41-a750-53a75b0c9439/public_url",
+  labNote: "9–11 hours. Lunch is a rumor.",
+};
+
+export const certificateRoute: {
+  n: string;
+  name: string;
+  short: string;
+  id: string;
+  validThrough?: string;
+  href: string;
+  gates: ExamLink[];
+  lab?: { href: string; note: string };
+}[] = [
   {
-    name: "Nokia IP Networks and Services Fundamentals",
-    href: "https://www.youracclaim.com/badges/88982db2-2ad3-47ca-9be3-97db753d15ab/public_url",
-  },
-  {
-    name: "Nokia Quality of Service",
-    href: "https://www.youracclaim.com/badges/f031fedd-835f-4f59-80c7-d061593ce31c/public_url",
-  },
-  {
-    name: "Nokia Network Routing Specialist I (NRS I)",
+    n: "01",
+    name: "Network Routing Specialist I",
+    short: "NRS I",
+    id: "9980",
     href: "https://www.youracclaim.com/badges/fb5dd3cb-8415-4078-8cc6-af2c4c6f267e/public_url",
+    gates: [
+      {
+        name: "IP Networks and Services Fundamentals",
+        href: "https://www.youracclaim.com/badges/88982db2-2ad3-47ca-9be3-97db753d15ab/public_url",
+      },
+    ],
   },
   {
-    name: "Nokia Network and Service Router Security",
-    href: "https://www.credly.com/badges/c3db3cfc-489c-4563-929b-49b79609df4b/public_url",
+    n: "02",
+    name: "Network Routing Specialist II",
+    short: "NRS II",
+    id: "1946",
+    href: "https://www.youracclaim.com/badges/a3c7f230-bb56-4108-9ecd-507536fe904c/public_url",
+    gates: [
+      {
+        name: "Interior Routing Protocols",
+        href: "https://www.youracclaim.com/badges/a4f3f42d-dca0-4756-bc1a-311e78b58629/public_url",
+      },
+      {
+        name: "Multiprotocol Label Switching",
+        href: "https://www.youracclaim.com/badges/59e0a899-a01b-4bbb-874a-0cea84ccbf3d/public_url",
+      },
+      {
+        name: "Services Architecture",
+        href: "https://www.youracclaim.com/badges/e5fad156-3d2e-4f9e-bccb-3cfed4ec5c20/public_url",
+      },
+    ],
+    lab: {
+      href: "https://www.youracclaim.com/badges/72fed1e6-6245-4635-a95c-8964f7852d01/public_url",
+      note: "3–4 hours. Then the title.",
+    },
   },
+];
+
+export const sraGates: ExamLink[] = [
   {
-    name: "Nokia Interior Routing Protocols",
-    href: "https://www.youracclaim.com/badges/a4f3f42d-dca0-4756-bc1a-311e78b58629/public_url",
-  },
-  {
-    name: "Nokia Virtual Private Routed Networks",
-    href: "https://www.credly.com/badges/36c21e3f-2ded-4055-857d-49878aa7d20e/public_url",
-  },
-  {
-    name: "Nokia Multiprotocol Label Switching",
-    href: "https://www.youracclaim.com/badges/59e0a899-a01b-4bbb-874a-0cea84ccbf3d/public_url",
-  },
-  {
-    name: "Nokia SRA Lab Exam",
-    href: "https://www.credly.com/badges/94a96c3a-9694-4f41-a750-53a75b0c9439/public_url",
-  },
-  {
-    name: "Nokia Services Architecture",
-    href: "https://www.youracclaim.com/badges/e5fad156-3d2e-4f9e-bccb-3cfed4ec5c20/public_url",
-  },
-  {
-    name: "Nokia Service Routing Architect (SRA)",
-    href: "https://www.credly.com/badges/cf827f7e-3df0-4139-8e8d-d47842e04f5c/public_url",
-  },
-  {
-    name: "Nokia Border Gateway Protocol",
+    name: "Border Gateway Protocol",
     href: "https://www.youracclaim.com/badges/52a6510a-1ffa-429f-8a29-f6c1074de299/public_url",
   },
   {
-    name: "Nokia Segment Routing",
-    href: "https://www.credly.com/badges/83f36bb0-3d1b-438d-b228-eb8f31e7cb64/public_url",
-  },
-  {
-    name: "Nokia NRS II Lab Exam",
-    href: "https://www.youracclaim.com/badges/72fed1e6-6245-4635-a95c-8964f7852d01/public_url",
-  },
-  {
-    name: "Nokia Ethernet Virtual Private Network Services",
-    href: "https://www.credly.com/badges/6a312d78-8d5b-47dc-91a4-9d5fcb36d372/public_url",
-  },
-  {
-    name: "Nokia Network Routing Specialist II (NRS II)",
-    href: "https://www.youracclaim.com/badges/a3c7f230-bb56-4108-9ecd-507536fe904c/public_url",
-  },
-  {
-    name: "Nokia Multicast Protocols",
-    href: "https://www.credly.com/badges/896aedc5-876d-40b4-9013-636ef53a4830/linked_in_profile",
-  },
-  {
-    name: "Nokia Virtual Private LAN Services",
+    name: "Virtual Private LAN Services",
     href: "https://www.youracclaim.com/badges/4a7c8007-438d-4b0b-8302-34db13f5c5df/public_url",
   },
   {
-    name: "Bell Labs 5G Certified Associate",
-    href: "https://learningstore.nokia.com/srv1/openbadge/award/6ac56172009dff707b9821abdff363f4/html",
+    name: "Virtual Private Routed Networks",
+    href: "https://www.credly.com/badges/36c21e3f-2ded-4055-857d-49878aa7d20e/public_url",
+  },
+  {
+    name: "Quality of Service",
+    href: "https://www.youracclaim.com/badges/f031fedd-835f-4f59-80c7-d061593ce31c/public_url",
+  },
+  {
+    name: "Network and Service Router Security",
+    href: "https://www.credly.com/badges/c3db3cfc-489c-4563-929b-49b79609df4b/public_url",
   },
 ];
+
+export const ipCatalog: ExamLink[] = [
+  {
+    name: "Segment Routing",
+    href: "https://www.credly.com/badges/83f36bb0-3d1b-438d-b228-eb8f31e7cb64/public_url",
+  },
+  {
+    name: "Ethernet Virtual Private Network Services",
+    href: "https://www.credly.com/badges/6a312d78-8d5b-47dc-91a4-9d5fcb36d372/public_url",
+    highlight: true,
+  },
+  {
+    name: "Multicast Protocols",
+    href: "https://www.credly.com/badges/896aedc5-876d-40b4-9013-636ef53a4830/linked_in_profile",
+  },
+];
+
+export const fiveG = {
+  name: "Bell Labs 5G Certified Associate",
+  id: "1924",
+  href: "https://learningstore.nokia.com/srv1/openbadge/award/6ac56172009dff707b9821abdff363f4/html",
+};

@@ -2,15 +2,21 @@ import { Footer, Header, Out, Section } from "@/components/Chrome";
 import {
   ambition,
   books,
-  certificates,
+  certificateRoute,
   education,
+  fiveG,
   hops,
+  ipCatalog,
   languages,
+  nokiaLogo,
   paper,
   profile,
   profiles,
   researchNotes,
   skills,
+  sra,
+  sraGates,
+  type ExamLink,
 } from "@/lib/content";
 
 export default function HomePage() {
@@ -301,21 +307,111 @@ function Work() {
   );
 }
 
+function ExamChips({ exams }: { exams: ExamLink[] }) {
+  return (
+    <ul className="mt-4 flex flex-wrap gap-2">
+      {exams.map((exam) => (
+        <li key={exam.name}>
+          <Out
+            href={exam.href}
+            className={`inline-block border bg-chassis px-3 py-1.5 font-mono text-xs text-phosphor no-underline hover:border-amber hover:text-amber ${
+              exam.highlight ? "border-phosphor" : "border-paper/20"
+            }`}
+          >
+            {exam.name}
+            {exam.note ? <span className="text-dim"> · {exam.note}</span> : null}
+          </Out>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function Credentials() {
   return (
-    <Section id="credentials" index="06  /  BADGES" title="Collected the hard way." aside="The lab exam does not care about your feelings.">
-      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {certificates.map((cert, index) => (
-          <li key={cert.name}>
-            <Out href={cert.href} className="ticket h-full no-underline">
-              <span className="font-mono text-[10px] text-amber">
-                {String(index + 1).padStart(2, "0")} · OPEN BADGE
-              </span>
-              <span className="mt-2 block text-paper">{cert.name}</span>
-            </Out>
+    <Section
+      id="credentials"
+      index="06  /  CERTIFICATES"
+      title="Collected the hard way."
+      aside="The lab exam does not care about your feelings."
+      mark={<img src={nokiaLogo} alt="Nokia" className="h-14 w-14" />}
+    >
+      <article className="border border-phosphor bg-panel p-6 md:p-8">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="font-mono text-xs tracking-wide text-amber">
+              ID {sra.id} · VALID THROUGH {sra.validThrough}
+            </p>
+            <h3 className="font-display mt-2 text-4xl leading-none md:text-5xl">
+              <Out href={sra.href} className="text-paper no-underline hover:text-phosphor">
+                {sra.short}
+              </Out>
+            </h3>
+            <p className="mt-2 text-lg text-paper">{sra.name}</p>
+            <div className="mt-3 h-1.5 w-24 bg-shirt" />
+            <p className="mt-4 max-w-2xl text-paper/90">{sra.line}</p>
+            <p className="mt-4 font-mono text-sm">
+              <Out href={sra.labHref}>SRA lab</Out>
+              <span className="text-amber"> · {sra.labNote}</span>
+            </p>
+          </div>
+          <img src={nokiaLogo} alt="" className="hidden h-16 w-16 shrink-0 sm:block" />
+        </div>
+      </article>
+
+      <ol className="relative mt-8 ml-3 border-l-2 border-cable/80">
+        {certificateRoute.map((rank) => (
+          <li key={rank.n} className="relative mb-8 ml-10">
+            <span className="absolute -left-12 top-6 flex h-7 w-9 items-center justify-center bg-chassis font-mono text-[10px] text-phosphor ring-2 ring-cable">
+              {rank.n}
+            </span>
+            <article className="border border-paper/12 bg-panel/90 p-5">
+              <p className="font-mono text-xs text-amber">
+                ID {rank.id}
+                {rank.validThrough ? ` · VALID THROUGH ${rank.validThrough}` : ""}
+              </p>
+              <h3 className="font-display mt-2 text-2xl">
+                <Out href={rank.href}>{rank.short}</Out>
+              </h3>
+              <p className="text-paper/90">{rank.name}</p>
+              <ExamChips exams={rank.gates} />
+              {rank.lab ? (
+                <p className="mt-3 font-mono text-sm text-dim">
+                  <Out href={rank.lab.href}>Lab</Out>
+                  <span> · {rank.lab.note}</span>
+                </p>
+              ) : null}
+            </article>
           </li>
         ))}
-      </ul>
+        <li className="relative ml-10">
+          <span className="absolute -left-12 top-6 flex h-7 w-9 items-center justify-center bg-chassis font-mono text-[10px] text-phosphor ring-2 ring-cable">
+            03
+          </span>
+          <article className="border border-paper/12 bg-panel/90 p-5">
+            <p className="font-mono text-xs text-amber">OPENS THE PLATE ABOVE</p>
+            <h3 className="font-display mt-2 text-2xl">Written gates</h3>
+            <ExamChips exams={sraGates} />
+          </article>
+        </li>
+      </ol>
+
+      <div className="mt-8 border border-amber/40 bg-black/30 p-5">
+        <p className="max-w-2xl text-paper">
+          Segment Routing, EVPN, and multicast. The advanced end of the shelf. EVPN is what a modern data center is built on.
+        </p>
+        <ExamChips exams={ipCatalog} />
+      </div>
+
+      <article className="relative mt-6 w-full max-w-md border border-dashed border-paper/25 bg-panel p-5 pr-28 opacity-80">
+        <p className="stamp" aria-hidden>
+          EXPIRED
+        </p>
+        <p className="font-mono text-xs text-dim">ID {fiveG.id}</p>
+        <h3 className="mt-2 max-w-[14rem] text-lg">
+          <Out href={fiveG.href}>{fiveG.name}</Out>
+        </h3>
+      </article>
     </Section>
   );
 }

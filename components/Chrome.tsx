@@ -6,7 +6,7 @@ const nav = [
   ["Craft", "#expertise"],
   ["Ambition", "#ambition"],
   ["Work", "#work"],
-  ["Badges", "#credentials"],
+  ["Certificates", "#credentials"],
   ["Ping", "#contact"],
 ];
 
@@ -86,21 +86,26 @@ export function Section({
   index,
   title,
   aside,
+  mark,
   children,
 }: {
   id: string;
   index: string;
   title: string;
   aside: string;
+  mark?: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <section id={id} className="scroll-mt-20 border-t border-paper/10 px-5 py-12 md:px-8 md:py-14">
       <div className="mx-auto max-w-6xl">
         <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="font-mono text-xs tracking-[0.22em] text-amber">{index}</p>
-            <h2 className="font-display text-4xl text-paper md:text-5xl">{title}</h2>
+          <div className="flex items-center gap-4">
+            {mark}
+            <div>
+              <p className="font-mono text-xs tracking-[0.22em] text-amber">{index}</p>
+              <h2 className="font-display text-4xl text-paper md:text-5xl">{title}</h2>
+            </div>
           </div>
           <p className="max-w-sm font-mono text-sm text-dim">{aside}</p>
         </div>
