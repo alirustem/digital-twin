@@ -1,38 +1,12 @@
-## Corporate Proxy
-- ALWAYS use the corporate proxy for external network operations, including pip, uv, npm, npx, git, curl, and other package managers or download tools.
-- Proxy: `http://135.245.192.7:8000`
-- In PowerShell, configure:
-  ```powershell
-  $env:HTTP_PROXY="http://135.245.192.7:8000"
-  $env:HTTPS_PROXY="http://135.245.192.7:8000"
-  $env:NO_PROXY="localhost,127.0.0.1,::1"
-  ```
-- Apply the proxy proactively, not after a connection failure.
-- ALWAYS bypass the proxy for localhost and local development servers.
-- Respect NO_PROXY for internal corporate services.
-- NEVER disable the corporate proxy globally to fix local development issues.
-- Never disable SSL verification. Use the corporate CA certificate if needed.
+# AGENTS.md — alirustem.com
 
-## Simplicity First
-- ALWAYS choose the simplest solution that works.
-- Never overengineer or introduce unnecessary abstractions, dependencies, or files.
-- Follow existing project conventions and reuse existing code.
-- Implement only what was requested. Avoid unrelated changes.
+## Project Scope
 
-## Efficiency
-- Act independently when requirements are clear.
-- NEVER request control of my screen or computer. Use available terminal commands, tools, and APIs instead. If manual interaction is required, explain the steps.
-- Avoid unnecessary questions, planning, commands, and explanations.
-- Diagnose errors before retrying. Never repeat failing commands blindly.
-- Make minimal, targeted changes and verify they work.
-- For development servers, check the actual port, terminal output, and running processes before troubleshooting.
-- Stop when the task is complete.
-
-## Safety
-- Never expose or commit secrets.
-- Identify processes before terminating them or freeing occupied ports.
-- Ask before destructive operations, Git pushes, or deployments.
-- Never bypass security controls to make something work.
+- This repository contains the alirustem.com personal portfolio website and its supporting infrastructure.
+- Follow the global engineering rules for network access, package management, efficiency, simplicity, and safety.
+- Preserve the existing architecture and project conventions.
+- Prefer minimal, targeted changes.
+- Do not introduce unnecessary dependencies, services, or infrastructure.
 
 ## PING Infrastructure Maintenance
 
@@ -49,5 +23,22 @@ Whenever modifying the PING contact form, Pages Function, Cloudflare Worker, Tur
 9. Test relevant behaviour after changes.
 10. Remember that GitHub pushes do not automatically update the manually deployed Worker.
 
+## Deployment Safety
+
+- Never deploy to production without explicit approval.
+- Never push changes to GitHub without explicit approval.
+- Never modify Cloudflare dashboard settings, bindings, routes, or secrets without explicit approval.
+- Distinguish local code changes from changes that affect live infrastructure.
+- Verify changes locally whenever practical.
+- Do not assume the deployed Worker matches the repository source.
+
+## Documentation
+
+- Keep documentation accurate and consistent with implementation.
+- Update existing documentation rather than creating duplicate documents.
+- Document significant infrastructure or deployment changes.
+- Never document actual secret values.
+
 ## Core Principle
-**Think like a senior engineer: simple, efficient, reliable, and maintainable.**
+
+**Keep the website simple, the infrastructure secure, and production changes deliberate.**

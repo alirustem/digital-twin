@@ -52,7 +52,7 @@ function Hero() {
             <span className="cursor" />
           </p>
           <p className="mt-6 font-mono text-xs tracking-[0.18em] text-amber">
-            {profile.role} · NOKIA OTTAWA
+            {profile.headline} · NOKIA OTTAWA
           </p>
           <h1 className="font-display mt-2 text-6xl leading-[0.9] text-paper md:text-8xl">
             Ali Rustem
@@ -62,13 +62,9 @@ function Hero() {
             I make packets behave, then teach software to notice when they don&apos;t.
           </p>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-dim">
-            Father first. Engineer by profession. Builder by instinct. Senior IP/MPLS
-            specialist turning years of network troubleshooting into automation and
-            applied AI. Working toward the intersection of technology, products, and
-            leadership — preferably without another unnecessary meeting.
-          </p>
-          <p className="mt-4 font-mono text-xs tracking-wide text-dim">
-            Father first. Engineer always. Curious indefinitely.
+            Father first. Engineer by profession. Builder by instinct. Years of
+            service-provider troubleshooting, carried into automation, applied AI,
+            and product leadership.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#journey" className="bg-phosphor px-4 py-2 font-mono text-sm text-chassis">
@@ -82,7 +78,7 @@ function Hero() {
             <p className="text-phosphor">$ ping ambition</p>
             <p className="text-paper">64 bytes from ottawa: ttl=64 time=8.8 ms</p>
             <p className="text-amber">HOP DOWN is a hobby, not a lifestyle.</p>
-            <p className="text-dim">0% packet loss. 100% opinions.</p>
+            <p className="text-dim">0% packet loss. Still forwarding.</p>
           </div>
         </div>
         <figure className="bezel mx-auto w-full min-w-0 max-w-md">
@@ -115,25 +111,25 @@ function About() {
         <div className="min-w-0 max-w-2xl space-y-5 text-base leading-relaxed text-paper/95 md:text-lg">
           <div className="space-y-3">
             <p>
-              Father first. Engineer, problem-solver, and builder by every other
-              measure. I believe in doing difficult things well, learning relentlessly,
-              and making sure the people who matter most never have to compete with a
-              routing table for my attention. Usually.
+              Engineer, problem-solver, and builder. I believe in doing difficult
+              things well, learning relentlessly, and making sure the people who
+              matter most never have to compete with a routing table for my attention.
             </p>
             <p>
-              Professionally, I&apos;ve spent years in the wonderfully unforgiving world
-              of service-provider networks. IP/MPLS, routing architecture, complex
-              troubleshooting, and the occasional network that has apparently decided
-              to develop a personality. I&apos;m a Senior TEC Engineer at Nokia, where
-              the problems tend to arrive after the easy answers have already been
-              exhausted.
+              Professionally, I&apos;ve spent years in service-provider networks:
+              IP/MPLS, routing architecture, and troubleshooting after the
+              straightforward answers are gone. I&apos;m a Senior TEC Engineer at
+              Nokia. TEC is a third-line technical engineering function: reproduce
+              complex customer-reported problems in the lab, investigate the
+              underlying cause, and collaborate with support and development on
+              the resolution.
             </p>
           </div>
           <div className="space-y-3">
             <p>
               I also build things. Python automation, network tooling, and increasingly,
               AI-powered systems that can analyze, troubleshoot, and make infrastructure
-              engineering a little less dependent on heroic amounts of manual effort.
+              engineering less dependent on manual effort.
               I&apos;m not particularly interested in AI as a buzzword. I want it to do
               actual work. Preferably without hallucinating a new BGP attribute.
             </p>
@@ -155,6 +151,8 @@ function About() {
             <dl className="mt-4 grid grid-cols-[6ch_1fr] gap-x-3 gap-y-1.5 font-mono text-sm leading-snug text-paper [&_dd]:m-0 [&_dt]:m-0 [&_dt]:font-normal">
               <dt className="text-dim">role</dt>
               <dd className="min-w-0">Father. Engineer. Builder.</dd>
+              <dt className="text-dim">title</dt>
+              <dd className="min-w-0">Senior IP/MPLS Engineer</dd>
               <dt className="text-dim">loc</dt>
               <dd className="min-w-0">Ottawa, Canada</dd>
               <dt className="text-dim">org</dt>
@@ -164,9 +162,7 @@ function About() {
               <dt className="text-dim">tools</dt>
               <dd className="min-w-0">Python, RAG, AI agents</dd>
               <dt className="text-dim">next</dt>
-              <dd className="min-w-0">Product & technology leadership</dd>
-              <dt className="text-dim">boss</dt>
-              <dd className="min-w-0 text-phosphor">A very opinionated toddler</dd>
+              <dd className="min-w-0">Product line leadership</dd>
             </dl>
           </aside>
           <ul className="flex flex-wrap gap-2" aria-hidden>
@@ -184,7 +180,7 @@ function About() {
       </div>
       <div className="mt-8 max-w-xl border border-paper/15 bg-black/50 p-4 font-mono text-sm leading-6">
         <p className="text-phosphor">$ uptime</p>
-        <p className="text-paper">38 years. Multiple countries. Bedtime has a stricter SLA.</p>
+        <p className="text-paper">38 years. Aleppo, Amman, Istanbul, Ottawa.</p>
         <p>
           <span className="text-dim">Primary process: </span>
           <span className="text-phosphor">dad</span>
@@ -273,19 +269,22 @@ function Ambition() {
     <Section id="ambition" index="04  /  AMBITION" title="Networking in. AI on top. Leadership ahead." aside="Same craft. A wider seat.">
       <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
         <p className="text-xl leading-snug text-paper">
-          Networking is my foundation. AI is my force multiplier. Product thinking is the next frontier.
+          I understand how complex technology behaves, why a customer needs it, and I want to help shape what gets built next.
         </p>
         <p className="text-paper/85">
-          I&apos;ve spent years learning how complex networks behave, how they fail, and how to make them work again. Now I&apos;m building tools that make that knowledge scalable.
+          The engineering is IP/MPLS: protocols, failure modes, and lab work when a network and its design disagree. The customer side started in pre-sales at V-Count, translating what the product could do into the problem a buyer was trying to solve, and continued at Nokia with service providers on outages, performance, and the requirement behind the ticket.
         </p>
         <p className="text-paper/85">
-          The longer-term goal is to move beyond solving individual problems and help shape the products, architectures, and strategies that prevent them in the first place.
+          I&apos;m also putting that knowledge into automation and applied AI, so the same troubleshooting does not have to start from zero every time.
+        </p>
+        <p className="text-paper/85">
+          The longer aim is product line management: technical product leadership grown from this work. Deep system knowledge, a clear view of the customer problem, and judgment about what is worth building.
         </p>
         <p className="border-l-2 border-phosphor py-0.5 pl-4 text-paper">
           I&apos;m not leaving engineering behind. I&apos;m taking it with me into product and technology leadership.
         </p>
         <p className="text-paper/85">
-          Because someone in the room should understand both the business case and why the routing adjacency is down.
+          The person in that seat should be able to hold a customer requirement and a routing adjacency in the same conversation.
         </p>
       </div>
       <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -380,6 +379,20 @@ function ExamChips({ exams }: { exams: ExamLink[] }) {
   );
 }
 
+function NokiaMark({ featured = false }: { featured?: boolean }) {
+  return (
+    <img
+      src={nokiaLogo}
+      alt="Nokia"
+      className={
+        featured
+          ? "h-20 w-20 shrink-0 object-contain sm:h-28 sm:w-28"
+          : "h-16 w-16 shrink-0 object-contain sm:h-24 sm:w-24"
+      }
+    />
+  );
+}
+
 function Credentials() {
   return (
     <Section
@@ -387,11 +400,10 @@ function Credentials() {
       index="06  /  CERTIFICATES"
       title="Collected the hard way."
       aside="The lab exam does not care about your feelings."
-      mark={<img src={nokiaLogo} alt="Nokia" className="h-14 w-14" />}
     >
       <article className="border border-phosphor bg-panel p-6 md:p-8">
-        <div className="flex items-start justify-between gap-4">
-          <div>
+        <div className="flex items-start justify-between gap-4 sm:gap-8">
+          <div className="min-w-0">
             <p className="font-mono text-xs tracking-wide text-amber">
               ID {sra.id} · VALID THROUGH {sra.validThrough}
             </p>
@@ -401,15 +413,15 @@ function Credentials() {
               </Out>
             </h3>
             <p className="mt-2 text-lg text-paper">{sra.name}</p>
-            <div className="mt-3 h-1.5 w-24 bg-shirt" />
-            <p className="mt-4 max-w-2xl text-paper/90">{sra.line}</p>
-            <p className="mt-4 font-mono text-sm">
-              <Out href={sra.labHref}>SRA lab</Out>
-              <span className="text-amber"> · {sra.labNote}</span>
-            </p>
           </div>
-          <img src={nokiaLogo} alt="" className="hidden h-16 w-16 shrink-0 sm:block" />
+          <NokiaMark featured />
         </div>
+        <div className="mt-3 h-1.5 w-24 bg-shirt" />
+        <p className="mt-4 max-w-2xl text-paper/90">{sra.line}</p>
+        <p className="mt-4 font-mono text-sm">
+          <Out href={sra.labHref}>SRA Lab Exam</Out>
+          <span className="text-amber"> · {sra.labNote}</span>
+        </p>
       </article>
 
       <ol className="relative mt-8 ml-3 border-l-2 border-cable/80">
@@ -419,19 +431,24 @@ function Credentials() {
               {rank.n}
             </span>
             <article className="border border-paper/12 bg-panel/90 p-5">
-              <p className="font-mono text-xs text-amber">
-                ID {rank.id}
-                {rank.validThrough ? ` · VALID THROUGH ${rank.validThrough}` : ""}
-              </p>
-              <h3 className="font-display mt-2 text-2xl">
-                <Out href={rank.href}>{rank.short}</Out>
-              </h3>
-              <p className="text-paper/90">{rank.name}</p>
+              <div className="flex items-start justify-between gap-4 sm:gap-6">
+                <div className="min-w-0">
+                  <p className="font-mono text-xs text-amber">
+                    ID {rank.id}
+                    {rank.validThrough ? ` · VALID THROUGH ${rank.validThrough}` : ""}
+                  </p>
+                  <h3 className="font-display mt-2 text-2xl">
+                    <Out href={rank.href}>{rank.short}</Out>
+                  </h3>
+                  <p className="text-paper/90">{rank.name}</p>
+                </div>
+                <NokiaMark />
+              </div>
               <ExamChips exams={rank.gates} />
               {rank.lab ? (
-                <p className="mt-3 font-mono text-sm text-dim">
-                  <Out href={rank.lab.href}>Lab</Out>
-                  <span> · {rank.lab.note}</span>
+                <p className="mt-3 font-mono text-sm">
+                  <Out href={rank.lab.href}>{rank.lab.name}</Out>
+                  <span className="text-amber"> · {rank.lab.note}</span>
                 </p>
               ) : null}
             </article>

@@ -75,8 +75,8 @@ export const hops: Hop[] = [
     href: "https://v-count.com/",
     place: "Istanbul, Turkey",
     lines: [
-      "Technical demos that turned into sales, then the post-sales relationship that kept them sold.",
-      "White papers, product overviews, and the translation layer between customers and engineering.",
+      "Pre-sales and post-sales: technical demos, then staying with the customer once the product was in use.",
+      "White papers and product overviews, translating what the product could do into the problem the customer needed solved.",
     ],
   },
   {
@@ -87,8 +87,8 @@ export const hops: Hop[] = [
     href: "https://nokia.com/",
     place: "Istanbul, Turkey",
     lines: [
-      "7950 XRS, 7750 SR, 7210 SAS, 7250 IXR, and 7705 SAR. Mentored Nokia IP TAC and kept the ticket queue honest.",
-      "Technical ambassador for service providers including Orange Morocco and Orange Jordan. Outages, performance, and bad configs got diagnosed.",
+      "7950 XRS, 7750 SR, 7210 SAS, 7250 IXR, and 7705 SAR. Mentored Nokia IP TAC on cases that needed deeper routing and protocol analysis.",
+      "Technical ambassador for service providers including Orange Morocco and Orange Jordan. Diagnosed outages, performance problems, and faulty configurations with the teams who owned them.",
     ],
   },
   {
@@ -99,8 +99,8 @@ export const hops: Hop[] = [
     href: "https://nokia.com/",
     place: "Ottawa, Canada",
     lines: [
-      "Remote troubleshooting for customers and internal teams: sites, logs, lab reproductions, traces, and the files a critical case actually needs.",
-      "Complex installs get the documented procedure, and a better idea when the procedure gives up. Then the lesson gets taught onward.",
+      "Remote investigation for customers and internal teams: reproduce complex IP/MPLS problems in the lab, then analyze protocol behaviour, configurations, logs, and traces.",
+      "Identify software defects and other underlying causes, and collaborate with support and development toward a resolution.",
     ],
   },
 ];
@@ -145,17 +145,17 @@ export const ambition = [
   {
     k: "NOW",
     title: "Build on the routing",
-    body: "Applied AI on top of IP/MPLS depth. Python, LLMs, agents, and things that actually run. This site is one of them.",
+    body: "Applied AI on top of IP/MPLS depth. Python, LLMs, and tools that have to run against a real network. This site is one of them.",
   },
   {
     k: "NEXT",
     title: "Same problems, newer fabric",
-    body: "Modern data-center networking, SR Linux, and automation that puts routing and AI on the same ticket.",
+    body: "Modern data-center networking, SR Linux, and automation that puts routing knowledge and software on the same problem.",
   },
   {
     k: "FURTHER",
-    title: "Product and technology leadership",
-    body: "The seat where technical depth, product delivery, and business judgment are the same job. Further management education if it makes the decisions better.",
+    title: "Product line leadership",
+    body: "Product line management from the engineering side: customer problems, technical depth, and a say in what gets built. Further management education if it makes those decisions better.",
   },
 ];
 
@@ -206,7 +206,7 @@ export const sra = {
   short: "SRA",
   id: "1159",
   validThrough: "Nov 2029",
-  line: "Nokia SRA — Nokia’s highest IP/MPLS certification, in the same league as Cisco CCIE Service Provider. Expert-level network design, architecture, and troubleshooting when reality disagrees with the design.",
+  line: "Nokia's highest IP/MPLS certification, comparable in technical depth to Cisco CCIE Service Provider. Covers advanced network architecture, design, routing, VPN services, QoS, and troubleshooting when reality disagrees with the design.",
   href: "https://www.credly.com/badges/cf827f7e-3df0-4139-8e8d-d47842e04f5c/public_url",
   labHref: "https://www.credly.com/badges/94a96c3a-9694-4f41-a750-53a75b0c9439/public_url",
   labNote: "9–11 hours. Lunch is a rumor.",
@@ -220,7 +220,7 @@ export const certificateRoute: {
   validThrough?: string;
   href: string;
   gates: ExamLink[];
-  lab?: { href: string; note: string };
+  lab?: { name: string; href: string; note: string };
 }[] = [
   {
     n: "01",
@@ -256,6 +256,7 @@ export const certificateRoute: {
       },
     ],
     lab: {
+      name: "NRS II Lab Exam",
       href: "https://www.youracclaim.com/badges/72fed1e6-6245-4635-a95c-8964f7852d01/public_url",
       note: "3–4 hours. Then the title.",
     },
