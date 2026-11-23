@@ -1,0 +1,25 @@
+{
+  "name": "alirustem-ping-mailer",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-22",
+  // No public workers.dev URL and no route. Only the Pages service binding can call this Worker.
+  "workers_dev": false,
+  "preview_urls": false,
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "alooshe.rstm@gmail.com",
+      "allowed_sender_addresses": ["ping@alirustem.com"]
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "PING_LIMIT",
+      "namespace_id": "71021",
+      "simple": {
+        "limit": 5,
+        "period": 60
+      }
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { Footer, Header, Out, Section } from "@/components/Chrome";
+import { PingForm } from "@/components/PingForm";
 import {
   ambition,
   books,
@@ -471,7 +472,11 @@ function Credentials() {
 function Contact() {
   return (
     <Section id="contact" index="07  /  PING" title="The lab picks up." aside="Ottawa. The one with the routers.">
-      <div className="grid gap-4 md:grid-cols-3">
+      <p className="max-w-2xl text-lg leading-relaxed text-paper/90">
+        Found a bug in my thinking? Have an interesting opportunity? Or just want to argue about BGP? My inbox is open.
+      </p>
+      <PingForm />
+      <div className="mt-8 grid gap-4 md:grid-cols-3">
         <Out href={`mailto:${profile.email}`} className="border border-phosphor/50 bg-panel p-5 no-underline hover:border-amber">
           <span className="font-mono text-xs text-phosphor">EMAIL</span>
           <span className="mt-2 block break-all text-lg text-paper">{profile.email}</span>

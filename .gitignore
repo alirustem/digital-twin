@@ -9,6 +9,9 @@ out
 # Secrets and private notes
 .env
 .env.*
+!.env.example
+.dev.vars
+worker/.dev.vars
 manifesto.md
 
 # Local AI agent instructions

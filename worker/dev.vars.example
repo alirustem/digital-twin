@@ -1,0 +1,8 @@
+# Copy to worker/.dev.vars for local `wrangler dev`. Never commit worker/.dev.vars.
+# Generate the shared token with:
+#   node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+# Put that same value in the Pages secret PING_INTERNAL_TOKEN.
+# Do not use Cloudflare's public test secret in production.
+
+TURNSTILE_SECRET_KEY=your_turnstile_secret_key
+PING_INTERNAL_TOKEN=replace_with_a_long_random_string

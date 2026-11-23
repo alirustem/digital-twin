@@ -69,9 +69,49 @@ body {
 .lab-link:focus-visible,
 a:focus-visible,
 button:focus-visible,
-summary:focus-visible {
+summary:focus-visible,
+.lab-field:focus-visible {
   outline: 2px solid var(--phosphor);
   outline-offset: 3px;
+}
+
+.lab-field {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(243, 230, 200, 0.2);
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--paper);
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  color-scheme: dark;
+}
+
+textarea.lab-field {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.lab-field:focus-visible {
+  border-color: var(--phosphor);
+}
+
+.lab-field[aria-invalid="true"] {
+  border-color: var(--amber);
+}
+
+.lab-field:disabled {
+  opacity: 0.6;
+}
+
+.lab-field:-webkit-autofill,
+.lab-field:-webkit-autofill:hover,
+.lab-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--paper);
+  caret-color: var(--paper);
+  box-shadow: 0 0 0 1000px #090807 inset;
 }
 
 .cursor::after {
