@@ -348,9 +348,9 @@ export default {
       },
       send: (mail) => {
         if (mail.to !== TO_ADDRESS || mail.from.email !== FROM_ADDRESS || mail.from.name !== FROM_NAME) {
-          const blocked = new Error("blocked");
-          blocked.code = "E_RECIPIENT_NOT_ALLOWED";
-          throw blocked;
+          throw Object.assign(new Error("blocked"), {
+            code: "E_RECIPIENT_NOT_ALLOWED"
+          });
         }
         return email.send({
           to: TO_ADDRESS,

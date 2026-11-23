@@ -34,5 +34,20 @@
 - Ask before destructive operations, Git pushes, or deployments.
 - Never bypass security controls to make something work.
 
+## PING Infrastructure Maintenance
+
+Whenever modifying the PING contact form, Pages Function, Cloudflare Worker, Turnstile integration, email bindings, rate limiting, or deployment configuration:
+
+1. Review `docs/PING_INFRASTRUCTURE.md` before making changes.
+2. Update the runbook whenever architecture, configuration, deployment, or troubleshooting procedures change.
+3. Maintain consistency between `worker/src/index.ts`, shared logic, and `worker/dashboard-worker.js`.
+4. Keep `worker/wrangler.jsonc` aligned with the intended Cloudflare configuration.
+5. Never commit credentials, secret keys, tokens, or actual secret values.
+6. Never expose the private Worker through a public endpoint without explicit approval.
+7. Never change the fixed email destination without explicit approval.
+8. Preserve the existing free-tier architecture unless instructed otherwise.
+9. Test relevant behaviour after changes.
+10. Remember that GitHub pushes do not automatically update the manually deployed Worker.
+
 ## Core Principle
 **Think like a senior engineer: simple, efficient, reliable, and maintainable.**
